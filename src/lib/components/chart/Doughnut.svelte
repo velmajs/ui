@@ -6,7 +6,7 @@
         color = false,
         max = 0,
         value = 0,
-        size
+        size = 1
     }: {
         color?: string | false;
         max?: number;

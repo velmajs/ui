@@ -1,5 +1,5 @@
 import {cubicOut} from 'svelte/easing';
-import type {CrossfadeParams} from "svelte/transition";
+import type {CrossfadeParams, TransitionConfig} from "svelte/transition";
 
 const [send, receive] = transform({duration: 200});
 
@@ -41,10 +41,7 @@ export function transform({...defaults}) {
     }
 
     function transition(items: Map<string, Element>, counterparts: Map<string, Element>, intro: boolean) {
-
         console.log({items, counterparts, intro})
-
-
         // @ts-expect-error TODO improve typings (are the public types wrong?)
         return (node: Element, params) => {
             items.set(params.key, node);
@@ -53,11 +50,12 @@ export function transform({...defaults}) {
                     const other_node = counterparts.get(params.key);
                     counterparts.delete(params.key);
                     if (!other_node) {
-                        return;
+                        return {};
                     }
                     return crossfade(other_node, node, params);
                 }
                 items.delete(params.key);
+                return {};
             };
         };
     }

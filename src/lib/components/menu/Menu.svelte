@@ -13,10 +13,10 @@
     }
 </script>
 
-<div class="ui-menu" out:send|global="{{key: 'menu'}}" in:receive|global="{{key: 'menu'}}">
+<div class="ui-menu" out:send|global={{key: 'menu'}} in:receive|global={{key: 'menu'}}>
     <Stack>
         {#each entries as entry}
-            <Button href="{entry.href}" class="{active(entry) ? 'active' : ''}">
+            <Button href={entry.href} class={active(entry) ? 'active' : ''}>
                 {#if entry.icon}
                     <Icon type={entry.icon} size={entry.iconSize ?? 1}/>
                 {/if}

@@ -63,18 +63,6 @@
                 justify-content: center;
                 width: 56px;
             }
-
-            .detail {
-                h3 {
-                    margin: .5rem 0;
-                    font-weight: 400;
-                }
-
-                p {
-                    margin: 0;
-                    font-size: .9rem;
-                }
-            }
         }
     }
 
