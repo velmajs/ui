@@ -1,5 +1,21 @@
 {
   "name": "@velmajs/ui",
   "type": "module",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "module": "index.ts",
+  "main": "index.ts",
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "svelte": "./index.ts"
+    }
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "svelte": "^5.23.1",
+    "eslint": "^9.22.0"
+  }
 }
