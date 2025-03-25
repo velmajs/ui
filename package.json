@@ -3,20 +3,30 @@
   "type": "module",
   "private": true,
   "version": "0.0.1",
-  "module": "index.ts",
-  "main": "index.ts",
+  "module": "src/lib/index.ts",
+  "main": "src/lib/index.ts",
   "exports": {
     ".": {
-      "types": "./index.ts",
-      "svelte": "./index.ts"
-    }
+      "types": "./src/lib/index.ts",
+      "svelte": "./src/lib/index.ts"
+    },
+    "./svelte-config": "./svelte.config.js",
+    "./themes/*": "./src/lib/themes/*"
   },
   "scripts": {
+    "dev": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "eslint ."
   },
+  "peerDependencies": {
+    "@sveltejs/kit": "^2.16.0",
+    "svelte": "^5.23.1"
+  },
   "devDependencies": {
+    "lightningcss": "^1.29.1",
+    "svelte-preprocess-cssmodules": "^3.0.1",
+    "@velmajs/typescript-config": "workspace:*",
     "@velmajs/eslint-config": "workspace:*",
-    "svelte": "^5.23.1",
+    "@fontsource-variable/outfit": "^5.2.5",
     "eslint": "^9.22.0"
   }
 }

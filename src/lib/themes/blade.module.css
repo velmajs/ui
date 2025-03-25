@@ -1,0 +1,64 @@
+@import "./reset.module.css";
+@import '@fontsource-variable/outfit';
+
+:root {
+    font-family: 'Outfit Variable', sans-serif;
+    --background: hsl(0, 0%, 95%);
+
+    --spacing: 1rem;
+    --radius: .5rem;
+    --shadow: hsl(214, 19%, 24%);
+
+    --light: hsl(240, 100%, 100%);
+    --light-contrast: hsl(210, 11%, 53%);
+
+    --primary-color: hsl(310, 71%, 53%);
+    --primary-contrast: hsl(240, 100%, 97%);
+
+    --secondary-color: hsl(240, 100%, 100%);
+    --secondary-contrast: hsl(210, 11%, 53%);
+
+    --success-color: hsl(123, 53%, 60%);
+    --success-contrast: hsl(0, 0%, 100%);
+
+    --warning-color: hsl(40, 100%, 78%);
+    --warning-contrast: hsl(33, 16%, 47%);
+
+    --danger-color: hsl(0, 100%, 50%);
+    --danger-contrast: hsl(0, 0%, 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        background: hsl(214, 28%, 5%);
+        color: hsl(240, 100%, 100%);
+        --background: hsl(214, 19%, 10%);
+
+        --spacing: 1rem;
+        --radius: .5rem;
+        --shadow: hsl(0, 0%, 0%);
+
+        --light: hsl(214, 19%, 10%);
+        --light-contrast: hsl(240, 100%, 100%);
+
+        --primary-color: hsl(255, 66%, 52%);
+        --primary-contrast: hsl(240, 100%, 97%);
+
+        --secondary-color: var(--background);
+        --secondary-contrast: hsl(240, 100%, 100%);
+
+        --success-color: hsl(123, 53%, 60%);
+        --success-contrast: hsl(0, 0%, 100%);
+
+        --warning-color: hsl(40, 100%, 78%);
+        --warning-contrast: hsl(33, 16%, 47%);
+
+        --danger-color: hsl(0, 100%, 50%);
+        --danger-contrast: hsl(0, 0%, 100%);
+    }
+}
+
+
+body {
+    /*background: red;*/
+}
